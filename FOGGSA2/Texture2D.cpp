@@ -66,7 +66,7 @@ bool Texture2D::LoadTextureTGA(const char* textureFileName)
 	type = tempHeaderData[2]; //Get TGA Type out of Header - Must be RGB for this to work
 	_width = ((unsigned char)tempHeaderData[13] << 8u) + (unsigned char)tempHeaderData[12]; // Find the width (Combines two bytes into a short)
 	_height = ((unsigned char)tempHeaderData[15] << 8u) + (unsigned char)tempHeaderData[14]; //Find the height
-	std::cout << _width << "," << _height << std::endl;
+
 	pixelDepth = tempHeaderData[16]; // Find the pixel depth (24/32bpp)
 
 	bool flipped = false;
@@ -76,7 +76,6 @@ bool Texture2D::LoadTextureTGA(const char* textureFileName)
 	//We only support RGB type
 	if (type == 2)
 	{
-		std::cout << textureFileName << " loaded." << std::endl;
 
 		glGenTextures(1, &_ID); //Get next Texture ID
 		glBindTexture(GL_TEXTURE_2D, _ID); //Bind the texture to the ID
@@ -89,7 +88,7 @@ bool Texture2D::LoadTextureTGA(const char* textureFileName)
 			gluBuild2DMipmaps(GL_TEXTURE_2D, 3, _width, _height, GL_BGRA_EXT, GL_UNSIGNED_BYTE, tempTextureData); // Mip-maps version
 		}
 		else {
-			//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, _width, _height, 0, GL_BGR_EXT, GL_UNSIGNED_BYTE, tempTextureData);std::cout << "eee";
+			//glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, _width, _height, 0, GL_BGR_EXT, GL_UNSIGNED_BYTE, tempTextureData);
 			gluBuild2DMipmaps(GL_TEXTURE_2D, 3, _width, _height, GL_BGR_EXT, GL_UNSIGNED_BYTE, tempTextureData); // Mip-maps version
 		}
 	}

@@ -62,7 +62,6 @@ void LinkedLists::DeleteAfter(ListNode* node) {
 		node->next = pTemp->next;
 
 		DestroyNodeObject(pTemp);
-		std::cout << "Obj deleted " << std::endl;
 		delete pTemp;
 	}
 }
@@ -124,7 +123,6 @@ ListNode* LinkedLists::Find(ListNode* node, SceneObject* obj) {
 		if (node->object == obj)
 		{
 			result = node;
-			std::cout << "Match found" << std::endl;
 		}
 		else {
 			result = Find(node->next, obj);

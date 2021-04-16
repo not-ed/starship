@@ -19,10 +19,6 @@ Cube::Cube(Mesh* mesh, Texture2D* texture, float x, float y, float z) : SceneObj
 	_rotation = (rand() % 360) * 1.0f;
 }
 
-Cube::~Cube() {
-	std::cout << "Cube Dest" << std::endl;
-}
-
 void Cube::Draw() {
 	if (_mesh->Vertices != nullptr && _mesh->Normals != nullptr && _mesh->Indices != nullptr) {
 		glBindTexture(GL_TEXTURE_2D, _texture->GetID());

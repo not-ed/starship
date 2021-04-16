@@ -49,8 +49,6 @@ void PlayerShip::Update(const bool* key) {
 		{
 			_position.y -= _moveSpeed / 2;
 		}
-
-		if (key['t']) { Kill(); }
 	}
 }
 

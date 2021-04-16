@@ -183,8 +183,20 @@ void Level::Draw(){
 		}
 		currentObj = currentObj->next;
 	}
-	//TODO: This needs to be wrapped up
-	//DrawString(std::to_string(_currentScore).c_str(), new Vector3{ _camera->eye.x,_camera->eye.y,_camera->eye.z-4.0f}, new Color{ 0.0f,0.796f,1.0f });
+	
+	
+	if (_player->IsAlive())
+	{
+		// Draw a diagetic text counter that looks like it is part of the ship itself.
+		DrawString(std::to_string(_currentScore).c_str(), new Vector3{ _player->GetPosition().x - 0.625f,_player->GetPosition().y - 0.2f,_camera->eye.z - 6.0f }, new Color{ 0.0f,0.796f,1.0f });
+	}
+	else {
+		// If the player is dead, show a game over message and prompt to restart.
+		DrawString("YOUR SCORE:", new Vector3{ _camera->center.x - 0.99f,_camera->center.y + 1.2f,_camera->eye.z - 6.0f }, new Color{ 1.0f,0.1f,0.1f });
+		DrawString(std::to_string(_currentScore).c_str(), new Vector3{ _camera->center.x - 0.625f,_camera->center.y + 0.88f,_camera->eye.z - 6.0f }, new Color{ 1.0f,0.1f,0.1f });
+		DrawString("Press 'R' To Restart", new Vector3{ _camera->center.x - 1.25f,_camera->center.y + 0.56f,_camera->eye.z - 6.0f }, new Color{ 1.0f,0.1f,0.1f });
+	}
+	
 }
 
 void Level::SpawnDebris() {
@@ -216,25 +228,15 @@ void Level::Reset() {
 	_currentScore = 0.0f;
 }
 
-// TODO: this is having some problems with centering, this needs to be fixed, and a game over and score counter needs to be added.
 void Level::DrawString(const char* text, Vector3* position, Color* color) {
 	glPushMatrix();
 
-	//int text_width = 0;
-	//for (int i = 0; i < strlen(text); i++)
-	//{
-	//	text_width += glutBitmapWidth(GLUT_BITMAP_HELVETICA_18, text[i]);
-	//}
-
-	//std::cout<<"T WIDTH "<< text_width << std::endl;
-
-	// Briefly Disable lighting and textures so that text color isn't affected by lighting or the current texture.
+	// Briefly Disable lighting and textures so that text color isn't affected by lighting or the current texture, and to ensure text isn't blocked by meshes or objects in front of it.
 	glDisable(GL_LIGHTING);
 	glDisable(GL_TEXTURE_2D);
+	glDisable(GL_DEPTH_TEST);
 
 	glColor3f(color->r, color->g, color->b);
-
-	//float centered_x = (position->x) + 4 -((text_width) / strlen(text));
 
 	glTranslatef(position->x, position->y, position->z);
 	glRasterPos2f(0.0f, 0.0f);
@@ -243,6 +245,7 @@ void Level::DrawString(const char* text, Vector3* position, Color* color) {
 	glutBitmapString(GLUT_BITMAP_HELVETICA_18, (unsigned char*)text);
 
 	// Re-enable lighting and textures now that drawing text is all done.
+	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_LIGHTING);
 
