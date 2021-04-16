@@ -1,0 +1,63 @@
+﻿  Collision.cpp
+D:\Projects\starship\FOGGSA2\Collision.cpp(14,26): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Corridor.cpp
+D:\Projects\starship\FOGGSA2\Corridor.cpp(6,32): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Cube.cpp
+D:\Projects\starship\FOGGSA2\Cube.cpp(77,29): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(77,57): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(78,29): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(78,57): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(78,85): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(79,30): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(79,59): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(79,88): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Cube.cpp(79,117): warning C4305: '=': truncation from 'double' to 'float'
+  Debris.cpp
+D:\Projects\starship\FOGGSA2\Debris.cpp(10,24): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Debris.cpp(13,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Projects\starship\FOGGSA2\Debris.cpp(14,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Projects\starship\FOGGSA2\Debris.cpp(15,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Projects\starship\FOGGSA2\Debris.cpp(42,33): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Projects\starship\FOGGSA2\Debris.cpp(43,31): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  GLUTCallbacks.cpp
+D:\Projects\starship\FOGGSA2\Level.h(40,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  HelloGL.cpp
+D:\Projects\starship\FOGGSA2\Level.h(40,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Projects\starship\FOGGSA2\HelloGL.cpp(8,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Level.cpp
+D:\Projects\starship\FOGGSA2\Level.h(40,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Projects\starship\FOGGSA2\Level.cpp(62,35): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(63,34): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(65,31): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(66,31): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(67,31): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(69,30): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(70,30): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(71,30): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\Level.cpp(193,36): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Projects\starship\FOGGSA2\Level.cpp(194,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  LinkedLists.cpp
+  main.cpp
+D:\Projects\starship\FOGGSA2\Level.h(40,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  MeshLoader.cpp
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(202,21): warning C4018: '<': signed/unsigned mismatch
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(241,24): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(241,46): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(241,69): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(242,24): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(242,46): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(242,68): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(243,25): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(243,48): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(243,71): warning C4305: '=': truncation from 'double' to 'float'
+D:\Projects\starship\FOGGSA2\MeshLoader.cpp(243,94): warning C4305: '=': truncation from 'double' to 'float'
+  Models.cpp
+  PlayerShip.cpp
+  Pyramid.cpp
+  SceneObject.cpp
+  Textures.cpp
+  Texture2D.cpp
+D:\Projects\starship\FOGGSA2\Texture2D.cpp(40,6): warning C4101: 'ID': unreferenced local variable
+D:\Projects\starship\FOGGSA2\Texture2D.cpp(105,6): warning C4101: 'ID': unreferenced local variable
+  Generating Code...
+  FOGGSA2.vcxproj -> D:\Projects\starship\Debug\FOGGSA2.exe
