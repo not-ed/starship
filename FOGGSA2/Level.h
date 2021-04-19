@@ -37,7 +37,7 @@ private:
 
 	void SpawnDebris();
 	float _debrisSpawnFrequency = 0.0f;
-	int _startingPropAmount = 20.0f;
+	int _startingPropAmount = 20;
 	int _debrisCount = 0;
 
 	// The minimum and max bounds that the player ship and debris can travel in.

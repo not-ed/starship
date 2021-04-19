@@ -2,11 +2,13 @@
 
 Debris::Debris(Mesh* mesh, Texture2D* texture, Vector3 position) : SceneObject(mesh, texture, position, _rotation, _scale) {
 	SetPosition(position);
+	_startingPointZ = position.z;
 	SetRotation(Vector3{ 0.0,180.0,0.0 });
 	SetScale(Vector3{ .5,.5,.5 });
+
 	_mesh = mesh;
 	_texture = texture;
-	_startingPointZ = position.z;
+
 	_collisionRadius = .55;
 
 	// Determine a constant rotation amount at random.

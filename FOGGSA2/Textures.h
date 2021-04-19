@@ -16,6 +16,7 @@ namespace Texture {
 	};
 }
 
+// Singleton class for managing textures used in game that can be accessed from anywhere in code, reducing memory usage by ensuring only 1 instance of each exists.
 class TextureAtlas
 {
 public:

@@ -10,12 +10,9 @@
 class Texture2D
 {
 public:
-	//Texture2D() {};
 	~Texture2D();
 
-	bool Load(char* path, int width, int height);
-	bool LoadTextureTGA(const char* textureFileName);
-	bool LoadTextureBMP(const char* textureFileName);
+	bool LoadTextureBMP(const char* texture_file_name);
 
 	GLuint GetID() const { return _ID; }
 	int GetWidth() const { return _width; }

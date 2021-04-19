@@ -17,21 +17,20 @@
 class HelloGL
 {
 public:
-
 	HelloGL(int argc, char* argv[]);
-	~HelloGL();
-	void InitGL(int argc, char* argv[]);
-	void InitObjects();
 
 	void Update();
 	void Display();
 
 	void Keyboard(unsigned char key, int x, int y);
 	void KeyboardUp(unsigned char key, int x, int y);
-	bool _keyStates[ASCII_COUNT];
-
 private:
-	//void DrawString(const char* text, Vector3* position, Color* color);
+	~HelloGL();
+
+	void InitGL(int argc, char* argv[]);
+	void InitObjects();
+	
+	bool _keyStates[ASCII_COUNT];
 };
 
 #endif

@@ -4,6 +4,7 @@ Corridor::Corridor(Mesh* mesh, Texture2D* texture, Vector3 position) : SceneObje
 	SetPosition(position);
 	SetRotation(Vector3{ 0.0,0.0,0.0 });
 	SetScale(Vector3{ 1.1,1.0,1.0 });
+
 	_mesh = mesh;
 	_texture = texture;
 }

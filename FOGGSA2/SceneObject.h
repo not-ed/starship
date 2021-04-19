@@ -13,7 +13,7 @@ class SceneObject
 public:
 	SceneObject(Mesh* mesh, Texture2D* texture);
 	SceneObject(Mesh* mesh, Texture2D* texture, Vector3 position, Vector3 rotation, Vector3 scale);
-	virtual ~SceneObject();
+	~SceneObject();
 
 	virtual void Update(const bool* key) {};
 	virtual void Draw() { DrawMesh(); };

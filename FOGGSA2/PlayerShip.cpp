@@ -3,13 +3,15 @@
 
 PlayerShip::PlayerShip(Mesh* mesh, Texture2D* texture, Vector3 position) : SceneObject(mesh, texture, position, _rotation, _scale) {
 	SetPosition(position);
+	_startingPosition = _position;
 	SetRotation(Vector3{ 0.0,180.0,0.0 });
+	_startingRotation = _rotation;
 	SetScale(Vector3{ .5,.5,.5 });
+
 	_mesh = mesh;
 	_texture = texture;
+
 	_collisionRadius = 1.0f;
-	_startingPosition = _position;
-	_startingRotation = _rotation;
 }
 
 void PlayerShip::Draw() {
@@ -17,8 +19,8 @@ void PlayerShip::Draw() {
 }
 
 void PlayerShip::Update(const bool* key) {
-	// Fly towards ground if dead.
-	if (!alive)
+	// Fly towards ground and "crash" if dead.
+	if (!_alive)
 	{
 		if (_position.y > 1.45f)
 		{
@@ -53,15 +55,15 @@ void PlayerShip::Update(const bool* key) {
 }
 
 void PlayerShip::Kill() {
-	if (alive == true)
+	if (_alive == true)
 	{
-		alive = false;
+		_alive = false;
 		SetTexture(TextureAtlas::Instance()->GetTexture(Texture::ID::SHIP_DESTROYED));
 	}
 }
 
 void PlayerShip::Reset() {
-	alive = true;
+	_alive = true;
 	_position = _startingPosition;
 	_rotation = _startingRotation;
 	SetTexture(TextureAtlas::Instance()->GetTexture(Texture::ID::SHIP));

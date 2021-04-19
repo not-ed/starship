@@ -20,7 +20,6 @@ SceneObject::~SceneObject() {
 
 void SceneObject::DrawMesh() {
 	if (_mesh != nullptr && _mesh->Vertices != nullptr && _mesh->Normals != nullptr && _mesh->Indices != nullptr) {
-		// Bind the currently assigned texture to
 		glBindTexture(GL_TEXTURE_2D, _texture->GetID());
 
 		// Enable vertex, normal and texture arrays for rendering/drawing.
@@ -56,6 +55,7 @@ void SceneObject::DrawMesh() {
 
 		// Render all faces stored in the mesh.
 		// Mesh loading and rendering assumes all faces are traingles (3 points). If a mesh's file uses polygons, it will not display correctly.
+		// This is due to limitations in the current mesh loader implementation, which only assumes the use of a triangulated mesh.
 		glBegin(GL_TRIANGLES);
 		for (int i = 0; i < _mesh->IndexCount / 3; i++)
 		{

@@ -12,13 +12,13 @@ public:
 	void Draw();
 	void Update(const bool* key);
 
-	bool IsAlive() { return alive; }
+	bool IsAlive() { return _alive; }
 
 	void Kill();
 
 	void Reset();
 private:
-	bool alive = true;
+	bool _alive = true;
 
 	Vector3 _startingPosition;
 	Vector3 _startingRotation;

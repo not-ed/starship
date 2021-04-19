@@ -17,13 +17,13 @@ namespace GLUTCallbacks {
 		}
 	}
 
-	void Timer(int preferredRefresh) {
+	void Timer(int preferred_refresh) {
 		int updateTime = glutGet(GLUT_ELAPSED_TIME);
 		helloGL->Update();
 		updateTime = glutGet(GLUT_ELAPSED_TIME) - updateTime;
 
 		// Call itself again every 16ms minus how long the previous Update took, if it took longer than 16ms, then it will execute again straight away
-		glutTimerFunc(preferredRefresh - updateTime, GLUTCallbacks::Timer, preferredRefresh);
+		glutTimerFunc(preferred_refresh - updateTime, GLUTCallbacks::Timer, preferred_refresh);
 	}
 
 	void Keyboard(unsigned char key, int x, int y) {

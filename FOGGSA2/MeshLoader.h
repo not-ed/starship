@@ -7,7 +7,6 @@
 
 namespace MeshLoader
 {
-	//Mesh* Load(char* path);
 	Mesh* LoadOBJ(char* obj_path);
 	Material* LoadMTL(char* mtl_path);
 };

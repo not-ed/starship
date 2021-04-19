@@ -25,7 +25,6 @@ Level::~Level() {
 
 	glDisable(GL_LIGHTING);
 	glDisable(GL_LIGHT0);
-
 }
 
 void Level::LoadObjects() {
@@ -196,7 +195,6 @@ void Level::Draw(){
 		DrawString(std::to_string(_currentScore).c_str(), new Vector3{ _camera->center.x - 0.625f,_camera->center.y + 0.88f,_camera->eye.z - 6.0f }, new Color{ 1.0f,0.1f,0.1f });
 		DrawString("Press 'R' To Restart", new Vector3{ _camera->center.x - 1.25f,_camera->center.y + 0.56f,_camera->eye.z - 6.0f }, new Color{ 1.0f,0.1f,0.1f });
 	}
-	
 }
 
 void Level::SpawnDebris() {
@@ -241,7 +239,6 @@ void Level::DrawString(const char* text, Vector3* position, Color* color) {
 	glTranslatef(position->x, position->y, position->z);
 	glRasterPos2f(0.0f, 0.0f);
 
-	
 	glutBitmapString(GLUT_BITMAP_HELVETICA_18, (unsigned char*)text);
 
 	// Re-enable lighting and textures now that drawing text is all done.

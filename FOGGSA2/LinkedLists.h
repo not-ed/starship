@@ -15,7 +15,7 @@ public:
 	// Insert a node as the first one in a linked list.
 	ListNode* InsertFirst(ListNode** head, SceneObject* obj);
 	// Insert a node after a specified point in the linked list.
-	void InsertAfter(ListNode* lastNode, SceneObject* obj);
+	void InsertAfter(ListNode* last_node, SceneObject* obj);
 
 	// Delete all nodes in the list
 	void DeleteList(ListNode** node);
@@ -37,8 +37,6 @@ public:
 	// Destroy the associated object of a node
 	// This cannot be called inside the node destructor as the sceneobject's (and its derivatives) destructor will not call if done due to forward declarations.
 	void DestroyNodeObject(ListNode* node);
-private:
-	ListNode* head = nullptr;
 };
 
 #endif

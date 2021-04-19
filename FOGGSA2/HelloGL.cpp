@@ -104,12 +104,3 @@ void HelloGL::Keyboard(unsigned char key, int x, int y) {
 void HelloGL::KeyboardUp(unsigned char key, int x, int y) {
 	_keyStates[key] = false;
 }
-
-//void HelloGL::DrawString(const char* text, Vector3* position, Color* color) {
-//	glPushMatrix();
-//	glTranslatef(position->x, position->y, position->z);
-//	
-//	glRasterPos2f(0.0f, 0.0f);
-//	glutBitmapString(GLUT_BITMAP_HELVETICA_18, (unsigned char*)text);
-//	glPopMatrix();
-//}

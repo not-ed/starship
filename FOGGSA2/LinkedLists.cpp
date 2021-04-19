@@ -32,16 +32,16 @@ ListNode* LinkedLists::InsertFirst(ListNode** head,SceneObject* obj) {
 	return newNode;
 }
 
-void LinkedLists::InsertAfter(ListNode* lastNode, SceneObject* obj) {
-	if (lastNode == nullptr)
+void LinkedLists::InsertAfter(ListNode* last_node, SceneObject* obj) {
+	if (last_node == nullptr)
 	{
 		return;
 	}
 
 	ListNode* newNode = new ListNode;
-	newNode->next = lastNode->next;
+	newNode->next = last_node->next;
 	newNode->object = obj;
-	lastNode->next = newNode;
+	last_node->next = newNode;
 }
 
 void LinkedLists::DeleteList(ListNode** node) {

@@ -17,6 +17,7 @@ namespace Model {
 	};
 }
 
+// Singleton class for managing meshes used in game that can be accessed from anywhere in code, reducing memory usage by ensuring only 1 of each mesh exists.
 class ModelAtlas
 {
 public:
